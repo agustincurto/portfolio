@@ -164,8 +164,7 @@ export default function Home() {
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground">Software Engineer</h2>
                 <p className="text-lg text-muted-foreground max-w-xl">
-                  Experienced software engineer with 7 years of experience building scalable applications and solving
-                  complex problems with clean, efficient code.
+                  Experienced software engineer with 7+ years of experience building scalable applications and solving complex problems with clean, efficient code.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <Button onClick={() => scrollToSection("about")}>Learn More About Me</Button>
@@ -195,43 +194,48 @@ export default function Home() {
 
               <div className="space-y-6">
                 <p className="text-lg">
-                  I'm a Software Engineer with 7 years of experience developing robust and scalable applications. My
-                  expertise spans full-stack development, cloud architecture, and building high-performance systems.
+                  I'm a Software Engineer with 7+ years of experience in backend development, passionate about building scalable and efficient systems.
+                  A curious and analytical thinker who enjoys investigating and learning, always staying up to date with the latest technologies.
+                  Committed team player with a strong sense of responsibility, effective communication skills, and a problem-solving mindset.
+                  Self-motivated, persistent, and goal-oriented.
+                  Holds a degree in Computer Science and a Computer Analyst certification from the <strong><a href="https://www.unc.edu.ar/" target="_blank" rel="noopener noreferrer">National University of Córdoba</a></strong>.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="gradient-border p-6 bg-card">
                     <h3 className="text-xl font-semibold mb-4">Key Experience</h3>
                     <div className="space-y-4">
-                      TBD
-                      {/* <div>
+                      <div>
                         <h4 className="font-medium">Senior Software Engineer</h4>
-                        <p className="text-sm text-muted-foreground">TechSolutions Inc. | 04/2020 - 12/2024</p>
-                        <ul className="list-disc list-inside text-sm mt-2 text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">Compass </p>
+                        {/* <ul className="list-disc list-inside text-sm mt-2 text-muted-foreground">
                           <li>Led development of microservices architecture for enterprise applications</li>
                           <li>Implemented CI/CD pipelines reducing deployment time by 40%</li>
                           <li>Mentored junior developers and conducted code reviews</li>
-                        </ul>
+                        </ul> */}
                       </div>
                       <div>
-                        <h4 className="font-medium">Software Engineer</h4>
-                        <p className="text-sm text-muted-foreground">InnovateTech | 06/2017 - 03/2020</p>
-                        <ul className="list-disc list-inside text-sm mt-2 text-muted-foreground">
+                        <h4 className="font-medium">Backend Engineer</h4>
+                        <p className="text-sm text-muted-foreground"> Satellogic </p>
+                        {/* <ul className="list-disc list-inside text-sm mt-2 text-muted-foreground">
                           <li>Developed and maintained RESTful APIs and web applications</li>
                           <li>Optimized database queries resulting in 30% performance improvement</li>
-                        </ul>
-                      </div> */}
+                        </ul> */}
+                      </div>
+                      <div>
+                        <h4 className="font-medium">Backend Engineer</h4>
+                        <p className="text-sm text-muted-foreground"> Mercado Libre </p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="gradient-border p-6 bg-card">
                     <h3 className="text-xl font-semibold mb-4">Skills & Education</h3>
                     <div className="space-y-4">
-                      TBD
-                      {/* <div>
+                      <div>
                         <h4 className="font-medium">Technical Skills</h4>
                         <p className="text-sm text-muted-foreground mt-1">
-                          JavaScript, TypeScript, React, Node.js, Python, AWS, Docker, Kubernetes, MongoDB, PostgreSQL
+                          Python, AWS, Docker, Kubernetes, MongoDB, PostgreSQL, etc... to be continue
                         </p>
                       </div>
                       <div>
@@ -243,11 +247,15 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-medium">Education</h4>
-                        <p className="text-sm text-muted-foreground">BS (GIS) & Remote Sensing</p>
+                        <p className="text-sm text-muted-foreground">Bachelor’s Degree in Computer Science</p>
                         <p className="text-xs text-muted-foreground">
-                          Karakoram International University | 2020 - Present
+                          FaMAF - National University of Córdoba | 2014 - 2020
                         </p>
-                      </div> */}
+                        <p className="text-sm text-muted-foreground">Computer Analyst</p>
+                        <p className="text-xs text-muted-foreground">
+                          FaMAF - National University of Córdoba | 2014 - 2017
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -271,7 +279,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-4">My Work</h2>
               <p className="text-lg text-muted-foreground mb-12">
-                Check out my portfolio on GitHub to see my latest projects and code.
+                Check out my portfolio on GitHub to see my latest projects.
               </p>
 
               <div className="gradient-border p-8 bg-card flex flex-col items-center">
@@ -279,9 +287,6 @@ export default function Home() {
                   <ExternalLink className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">View My Portfolio</h3>
-                <p className="text-muted-foreground mb-8 max-w-md">
-                  Explore my software engineering projects, including web applications, APIs, and system architecture.
-                </p>
                 <Button asChild size="lg">
                   <a
                     href={GITHUB_URL}
@@ -299,15 +304,13 @@ export default function Home() {
                 <div className="p-6 rounded-lg bg-card border border-border">
                   <h3 className="font-semibold mb-2">Backend Development</h3>
                   <p className="text-sm text-muted-foreground">
-                    Building robust, scalable server-side applications and APIs with Node.js, Python, and cloud
-                    technologies.
+                    Building robust, scalable server-side applications and APIs with Python, Golang and cloud technologies.
                   </p>
                 </div>
                 <div className="p-6 rounded-lg bg-card border border-border">
                   <h3 className="font-semibold mb-2">Frontend Development</h3>
                   <p className="text-sm text-muted-foreground">
-                    Creating responsive, interactive user interfaces with React, TypeScript, and modern web
-                    technologies.
+                    Creating responsive, interactive user interfaces with React, TypeScript, and modern web technologies.
                   </p>
                 </div>
                 <div className="p-6 rounded-lg bg-card border border-border">
