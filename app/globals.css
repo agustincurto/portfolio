@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 75% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 75% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 75% 16%;
+    --primary: 210 75% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 200 30% 96%;
+    --secondary-foreground: 210 75% 16%;
+    --muted: 200 30% 96%;
+    --muted-foreground: 210 40% 40%;
+    --accent: 200 60% 47%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 30% 85%;
+    --input: 200 30% 85%;
+    --ring: 200 60% 47%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 75% 16%;
+    --foreground: 0 0% 98%;
+    --card: 210 75% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 75% 16%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 210 75% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 50% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 50% 20%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 200 60% 47%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 200 60% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #145da0, #2e8bc0);
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(to right, #2e8bc0, #b1d4e0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
