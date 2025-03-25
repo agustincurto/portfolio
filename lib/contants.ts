@@ -1,0 +1,5 @@
+export const EMAIL = "agustincurtostrasorier@gmail.com"
+export const RESUME_FILE = "/AgustinCurtoStrasorier_short.pdf"
+export const FULL_RESUME_FILE = "/AgustinCurtoStrasorier_full.pdf"
+export const GITHUB_URL = "https://github.com/agustincurto"
+export const LINKEDIN_URL = "https://www.linkedin.com/in/agustincurto/"

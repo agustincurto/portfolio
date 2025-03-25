@@ -9,7 +9,9 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Download, Send, Linkedin, ExternalLink, Mail, Phone, MapPin, Menu, X } from "lucide-react"
+import { EMAIL, RESUME_FILE, FULL_RESUME_FILE, GITHUB_URL, LINKEDIN_URL} from "@/lib/contants"
+import { Download, Send, Linkedin, ExternalLink, Mail, MapPin, Menu, X } from "lucide-react"
+
 
 export default function Home() {
   const { toast } = useToast()
@@ -113,7 +115,7 @@ export default function Home() {
               Contact
             </button>
             <Button asChild size="sm">
-              <a href="/resume.pdf" download>
+              <a href={RESUME_FILE} download>
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </a>
@@ -142,7 +144,7 @@ export default function Home() {
               Contact
             </button>
             <Button asChild size="sm" className="w-full">
-              <a href="/resume.pdf" download>
+              <a href={RESUME_FILE} download>
                 <Download className="mr-2 h-4 w-4" />
                 Resume
               </a>
@@ -199,9 +201,10 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="gradient-border p-6 bg-card">
-                    <h3 className="text-xl font-semibold mb-4">Experience</h3>
+                    <h3 className="text-xl font-semibold mb-4">Key Experience</h3>
                     <div className="space-y-4">
-                      <div>
+                      TBD
+                      {/* <div>
                         <h4 className="font-medium">Senior Software Engineer</h4>
                         <p className="text-sm text-muted-foreground">TechSolutions Inc. | 04/2020 - 12/2024</p>
                         <ul className="list-disc list-inside text-sm mt-2 text-muted-foreground">
@@ -217,14 +220,15 @@ export default function Home() {
                           <li>Developed and maintained RESTful APIs and web applications</li>
                           <li>Optimized database queries resulting in 30% performance improvement</li>
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
                   <div className="gradient-border p-6 bg-card">
                     <h3 className="text-xl font-semibold mb-4">Skills & Education</h3>
                     <div className="space-y-4">
-                      <div>
+                      TBD
+                      {/* <div>
                         <h4 className="font-medium">Technical Skills</h4>
                         <p className="text-sm text-muted-foreground mt-1">
                           JavaScript, TypeScript, React, Node.js, Python, AWS, Docker, Kubernetes, MongoDB, PostgreSQL
@@ -243,14 +247,14 @@ export default function Home() {
                         <p className="text-xs text-muted-foreground">
                           Karakoram International University | 2020 - Present
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
 
                 <div className="flex justify-center pt-6">
                   <Button asChild>
-                    <a href="/resume.pdf" download>
+                    <a href={FULL_RESUME_FILE} download>
                       <Download className="mr-2 h-4 w-4" />
                       Download Full Resume
                     </a>
@@ -280,7 +284,7 @@ export default function Home() {
                 </p>
                 <Button asChild size="lg">
                   <a
-                    href="https://github.com/agustincurto"
+                    href={GITHUB_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -329,19 +333,13 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <Mail className="h-5 w-5 mr-3 text-primary" />
-                      <a href="mailto:agustin.curto@gmail.com" className="text-muted-foreground hover:text-primary">
-                        agustin.curto@gmail.com
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <Phone className="h-5 w-5 mr-3 text-primary" />
-                      <a href="tel:+123456789" className="text-muted-foreground hover:text-primary">
-                        +12 345 6789
+                      <a href={`mailto:${EMAIL}`} className="text-muted-foreground hover:text-primary">
+                        {EMAIL}
                       </a>
                     </div>
                     <div className="flex items-center">
                       <MapPin className="h-5 w-5 mr-3 text-primary" />
-                      <span className="text-muted-foreground">Buenos Aires, Argentina</span>
+                      <span className="text-muted-foreground">Córdoba, Argentina</span>
                     </div>
                   </div>
 
@@ -349,7 +347,7 @@ export default function Home() {
                   <div className="flex space-x-4">
                     <Button asChild variant="outline" size="icon">
                       <a
-                        href="https://www.linkedin.com/in/agustincurto/"
+                        href={LINKEDIN_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn Profile"
@@ -359,7 +357,7 @@ export default function Home() {
                     </Button>
                     <Button asChild variant="outline" size="icon">
                       <a
-                        href="https://github.com/agustincurto"
+                        href={GITHUB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub Profile"
@@ -380,7 +378,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="icon">
-                      <a href="mailto:agustin.curto@gmail.com" aria-label="Email">
+                      <a href={`mailto:${EMAIL}`} aria-label="Email">
                         <Mail className="h-5 w-5" />
                       </a>
                     </Button>
@@ -477,7 +475,7 @@ export default function Home() {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
-                href="https://www.linkedin.com/in/agustincurto/"
+                href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
@@ -485,14 +483,14 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/agustincurto"
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary"
               >
                 GitHub
               </a>
-              <a href="mailto:agustin.curto@gmail.com" className="text-muted-foreground hover:text-primary">
+              <a href={`mailto:${EMAIL}`} className="text-muted-foreground hover:text-primary">
                 Email
               </a>
             </div>
